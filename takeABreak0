@@ -1,0 +1,10 @@
+import time 
+import webbrowser
+
+arrival_time=3
+departure_time=0
+print("This program had started in "+ time.ctime())
+while departure_time<arrival_time:
+    time.sleep(10)
+    webbrowser.open("https://www.youtube.com/watch?v=AHHBECfE1qM")
+    departure_time=departure_time+1
