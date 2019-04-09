@@ -1,0 +1,17 @@
+import urllib.request
+import webbrowser
+def read_text(): 
+    yazi= open(r"C:\Users\BARBAROSUNTORUNU\Desktop\deneme.txt")
+    icerik=yazi.read()
+    print(icerik)
+    yazi.close()
+    webbrowser.open("http://www.wdylike.appspot.com/?q="+icerik)    
+    checkText(icerik)
+
+def checkText(text_to_check):
+    baglanti=urllib.request.urlopen("http://www.wdylike.appspot.com/?q="+text_to_check)
+    output=baglanti.read()
+    print("cevappppppppppppppppppppppppp           "+output)
+    baglanti.close()
+
+read_text()
