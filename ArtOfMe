@@ -1,0 +1,113 @@
+import turtle
+import webbrowser
+import time
+#kare
+def draw_square(some_turtle):
+    for i in range(1,5):
+        some_turtle.forward(160)
+        some_turtle.left(90)
+#çokluKare
+def draw_lot_square(some_turtle):
+    for j in range(1,37):
+        draw_square(some_turtle)
+        some_turtle.left(10)
+#üçgen
+def draw_triangle(some_turtle):
+    some_turtle.fillcolor("red")
+    for i in range(1,4):
+        some_turtle.forward(20)
+        some_turtle.left(120)
+#çokluÜçgen3tane
+def draw_triangles1(some_turtle):
+    for i in range(1,3):
+        draw_triangle(some_turtle)
+        some_turtle.forward(20)
+    some_turtle.left(120)
+    some_turtle.forward(20)
+    draw_triangle(some_turtle)
+    some_turtle.forward(20)
+    some_turtle.right(120)
+#çoklu3gen köşegenler için
+def draw_triangles2(some_turtle):
+    #sol alttan sağ üst köşeye giden köşegenin sağ tarafı için
+    for i in range(1,9):
+        draw_triangles1(some_turtle)
+    #sol alttan sağ üst köşeye giden köşegenin sol tarafı için
+    some_turtle.left(180)
+    for i in range(1,9):
+        draw_triangles1(some_turtle)
+    for j in range(1,3):
+    #sağ alttan sol üst köşeye giden köşegenin üst tarafı için
+    #ortadaki köşegenin üts tarafı için
+        some_turtle.left(180)
+        some_turtle.forward(160)
+        some_turtle.left(60)
+        for i in range(1,9):
+            draw_triangles1(some_turtle)
+    #sağ alttan sol üst köşeye giden köşegenin alt tarafı için
+    #ortadaki köşegenin alt tarafı için
+        some_turtle.left(180)
+        for i in range(1,9):
+            draw_triangles1(some_turtle)
+#köşelere 3genler son adım
+def draw_triangles3(some_turtle):
+    draw_triangles2(some_turtle)
+    some_turtle.left(180)
+    some_turtle.forward(40)
+    for i in range(1,7):
+        draw_triangles1(some_turtle)
+        some_turtle.right(60)
+        some_turtle.forward(40)
+        some_turtle.left(60)
+        draw_triangles1(some_turtle)
+        some_turtle.forward(80)
+        some_turtle.left(60)
+
+#fraktal
+def draw_fraktal(some_turtle):
+    for i in range(1,7):
+        some_turtle.forward(160)
+        some_turtle.left(60)
+    for i in range(1,4):
+        some_turtle.forward(160)
+        some_turtle.left(120)
+        some_turtle.forward(320)
+        some_turtle.left(120)
+    draw_triangles3(some_turtle)
+
+def draw_art():
+    webbrowser.open("https://www.youtube.com/watch?v=fzQbI58BzBo")
+    time.sleep(10)
+
+    window= turtle.Screen()
+    window.bgcolor("blue")
+
+    nuri=turtle.Turtle()
+    nuri.shape("turtle")
+    nuri.pencolor("orange")
+    nuri.pensize(3)
+    nuri.speed(0)
+
+    nuri.right(120)
+    nuri.forward(160)
+    nuri.left(120)
+    draw_fraktal(nuri)
+
+    brad=turtle.Turtle()
+    brad.shape("turtle")
+    brad.pencolor("red")
+    brad.pensize(3)
+    brad.speed(0)
+    #draw_square(nuri)
+    time.sleep(5)
+    draw_lot_square(brad)
+    
+    #brat=turtle.Turtle()
+    #brat.shape("arrow")
+    #brat.color("blue")
+    #brat.speed(1)
+    #brat.circle(160)
+
+    window.exitonclick()
+
+draw_art()
