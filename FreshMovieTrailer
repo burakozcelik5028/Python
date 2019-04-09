@@ -1,0 +1,33 @@
+import media
+import fresh_tomatoes
+
+toy_story=media.Movie("Toy Story","it is a anime film for children. Alles Kinder love it.", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvBxwiDIWbmR-1vV5OHrZLbMK9T6iD2KUBCBbL4QAmp9okOjXV","https://www.youtube.com/watch?v=KYz2wyBy3kc")
+#print(toy_story.storyline)
+
+avatar=media.Movie("Avatar","it is a story of life which exist in different planet.", "http://www.imgim.com/17aa718c1ab15b482505b8431cf596fc.jpg", "https://www.youtube.com/watch?v=6ziBFh3V1aM")
+#print(avatar.storyline)
+#avatar.show_trailer()
+
+last_castle=media.Movie("Last Castle", "It is a legend old soldier's story in prison", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo9xgFmYvdjgqCEoGzYYq081mjQvwYLrQKmRduABmLpTolcMYx", "https://www.youtube.com/watch?v=THWd2Qtp_mo")
+#last_castle.show_trailer()
+
+million_dollar_baby=media.Movie("Million Dollar Baby", "A story of a girl who fight with fate", "https://m.media-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_.jpg", "https://www.youtube.com/watch?v=5_RsHRmIRBY")
+#http://unisci24.com/data_images/wlls/34/287667-million-dollar-baby.jpg
+
+cinderella_man=media.Movie("Cinderella Man", "A legend man's turning back to, he born again", "https://3.bp.blogspot.com/-CeB6kD3KcTY/Uq5G0S4k0eI/AAAAAAAAGkU/Q6cXmOK-PXc/s1600/296379105.jpg", "https://www.youtube.com/watch?v=DlbHzcH4VJY")
+
+#https://www.youtube.com/watch?v=gsjEX91vAgY
+#https://www.youtube.com/watch?v=fypU61oMxF0
+shutter_island=media.Movie("Shutter Island", "Story of lost mind...", "https://i0.wp.com/r3yekw.sn2.livefilestore.com/y1pr3zjjw0n_UG9SmEQPOtVdZjmIOY_t2Kxwqw2PdI2e8182cAB-j3jcvxeaaad9nZW5tFBiozhmZ4_Z_7m06wcrK676H_levr8/shutter-island-1.jpg?resize=370%2C600&ssl=1", "https://www.youtube.com/watch?v=5iaYLCiq5RM")
+
+the_shawshank_redemption=media.Movie("the shawshank redemption", "Never lost your hope. Hope is good think.", "https://img00.deviantart.net/2f2f/i/2015/244/7/7/the_shawshank_redemption___movie_poster_by_zungam80-d97zgxc.jpg", "https://www.youtube.com/watch?v=6hB3S9bIaco")
+
+#bu alttaki iki satır site görünümü için
+movies=[toy_story, avatar, last_castle, million_dollar_baby, cinderella_man, shutter_island, the_shawshank_redemption]
+fresh_tomatoes.open_movies_page(movies)
+
+print(media.Movie.VALID_RATINGS)
+print(media.Movie.__doc__)
+print(media.Movie.__class__)
+print(media.Movie.__name__)
+print(media.Movie.__module__)
