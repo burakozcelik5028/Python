@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+vize = int(input("Vize notunuzu giriniz; "))
+final = int(input("Final notunuzu giriniz; "))
+ortalama = (vize*4/10)+(final*6/10)
+if ortalama<100:
+    note=5
+
+if ortalama<85:
+    note=4
+
+if ortalama<70:
+    note=3
+
+if ortalama<55:
+    note=2
+
+if ortalama<45:
+    note=1
+
+print ("Ortalamaniz: ",ortalama)
+print ("Notunuz: ",note)
