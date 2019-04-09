@@ -1,0 +1,19 @@
+import os
+def rename_file():
+# burası dosyamızın içindekileri listeliyor
+    liste=os.listdir(r"C:\Users\BARBAROSUNTORUNU\Desktop\prank")
+    print(liste)
+
+    saved_path=os.getcwd()
+    print("Suanda olduğumuz yer: "+ saved_path)
+    os.chdir(r"C:\Users\BARBAROSUNTORUNU\Desktop\prank")
+    v=os.getcwd()
+    print("Suanda olduğumuz yer: "+ v)
+    
+# burası dosyamızın içindeki resimlerin numaralarını 
+#kaldırarak alfabetik sıraya girmesini sağlıyor
+    for file_name in liste:
+        os.rename(file_name, file_name.maketrans("aaaaaaaaaa","0123456789"))
+    os.chdir(saved_path)
+
+rename_file()
